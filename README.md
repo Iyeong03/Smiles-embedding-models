@@ -1,8 +1,8 @@
 # Smiles-embedding-models
 데이콘에서 개최된 제2회 신약개발 경진대회를 참가하면서 사용한 embedding model 정리 (최종 등수 Public : 42등 score : 0.65308)
 ### GNN (Graph Neural Network)
-###- 그래프 구조 데이터를 처리하고 학습하는 데 사용되는 신경망 모델
-###- Message Passing을 통해 노드 간의 정보를 교환하고 집계하는 과정을 통해 임베딩을 학습
+- 그래프 구조 데이터를 처리하고 학습하는 데 사용되는 신경망 모델
+- Message Passing을 통해 노드 간의 정보를 교환하고 집계하는 과정을 통해 임베딩을 학습
 - 코드상에서는 GIN Convolutional Layer를 두 번 적용하고 그 결과를 global mean pooling을 통해 그래프 수준의 vector로 요약한 후, FCN을 통해 최종 예측을 진행하도록 함
 
 - Chem의 GetAtoms 등 사용
@@ -94,7 +94,7 @@
 - github (HUBioDataLab/SELFormer)
 - embedding된 값을 이용하여 SELFormer를 통해 Regression task를 수행하도록 함
 - 모델 학습과 예측할 때 task 파라미터 값을 입력해야 하는데 제작자가 제공하는 종류는 4가지로 우리가 해야하는 task와 딱 맞는 것이 없어서 score가 0.54정도로 낮게 나온거 같음
-### KNN (최종적으로 예측에 사용한 회귀모델)
+### **KNN (최종적으로 예측에 사용한 회귀모델)**
 - 새로운 데이터 포인트와 기존 데이터 포인트 간의 거리를 계산하여, 가장 가까운 k개의 이웃 데이터를 선택하고, 이들의 정보를 기반으로 분류 또는 회귀 작업을 수행함
 - 하이퍼파라미터 k는 모델의 성능에 큰 영향을 미치며, 작은 k값은 과적합(overfitting), 큰 k값은 과소적합(underfitting)의 위험이 있음
 - 모델의 성능을 위해서 grid search를 통해서 모델의 최적의 하이퍼파라미터를 찾음
