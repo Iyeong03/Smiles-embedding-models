@@ -23,4 +23,18 @@
   2. Graph의 각 노드 u에 대하여 길이 l만큼의 random walk 실행
   3. node2vec을 SGD로 최적화
 - 기존의 DeepWalk 모델의 단점을 보완한 모델로 유연한 탐색과 다양한 그래프의 구조적 관계를 학습할 수 있다.
- 
+ ### GloVe (Global Vectors for Word Representation)
+ - 정적(Static) 단어 임베딩을 생성하는 모델로 각 단어를 고정된 벡터 공간에 mapping
+ - 전체 corpus의 static 정보를 활용해 단어 간의 co-occurrence information(동시 발생 정보)를 학습
+ - Co-occurrence Matrix를 생성하고 이 정보를 활용해 Co-occurrence probability를 계산하여 단어간의 관계성을 파악
+ - 학습된 후의 모든 단어는 항상 동일한 벡터로 표현되고 전체 코퍼스의 통계적 정보를 활용해 단어 간의 유사성을 효과적으로 표현할 수 있음
+### BERT (Bidirectional Encoder Representations from Trnasformers)
+- Contextual embedding을 생성하는 모델로 Transformer 구조를 기반으로 학습
+- 단어를 양방향으로 동시에 고려하여 임베딩을 생성하는 데 도움이 됨
+- MLM과 NSP를 목표로 pre-trained된 base 모델을 사용
+- 계산 복잡도가 높아서 많은 메모리 필요로 함
+### SelFormer
+- SELFIES를 활용하여 분자 구조 정보를 학습하는 모델로 self-supervised learning 방식의 모델
+- RoBERTa Tokenizer를 활용하여 Smiles를 tokenize
+- 제작자가 제공한 SMILES 데이터들을 이용하여 SelFormer pre-train 진행 (각기 다른 파라미터로 3개의 모델 pre-train)
+- loss가 낮은 모델 기준으로 대회 데이터를 이용하여 embedding 진행
