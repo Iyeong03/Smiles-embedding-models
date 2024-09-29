@@ -1,5 +1,5 @@
 # Smiles-embedding-models
-# - 데이콘에서 개최된 제2회 신약개발 경진대회를 참가하면서 사용한 embedding model 정리 (최종 등수 Public : 42등 score : 0.65308)
+#### - 데이콘에서 개최된 제2회 신약개발 경진대회를 참가하면서 사용한 embedding model 정리 (최종 등수 Public : 42등 score : 0.65308)
 ### GNN (Graph Neural Network)
 - 그래프 구조 데이터를 처리하고 학습하는 데 사용되는 신경망 모델
 - Message Passing을 통해 노드 간의 정보를 교환하고 집계하는 과정을 통해 임베딩을 학습
