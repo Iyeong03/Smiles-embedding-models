@@ -1,5 +1,5 @@
 # Smiles-embedding-models
-데이콘에서 개최된 제2회 신약개발 경진대회를 참가하면서 사용한 embedding model 정리 (최종 등수 Public : 42등 score : 0.65308)
+# - 데이콘에서 개최된 제2회 신약개발 경진대회를 참가하면서 사용한 embedding model 정리 (최종 등수 Public : 42등 score : 0.65308)
 ### GNN (Graph Neural Network)
 - 그래프 구조 데이터를 처리하고 학습하는 데 사용되는 신경망 모델
 - Message Passing을 통해 노드 간의 정보를 교환하고 집계하는 과정을 통해 임베딩을 학습
@@ -81,12 +81,12 @@
 ### XGBoost
 - 모듈 불러와서 사용
 - 앙상블 기법 사용 (bagging)
-### LGGM
+### LGBM
 - 모듈 불러와서 사용
 ### VAE
 - 모듈 사용
 - 직접 구현 -> 사이즈 문제로 실패
-### Transformer
+### Transformers
 - hugging face (seyonec/PubChem10M_SMILES_BPE_180k)
 - pretrained된 모델과 target 값이 다르기에 사전 학습 없이 진행함
 - 그래서인지 score가 0.57에서 그침
